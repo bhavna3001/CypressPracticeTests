@@ -1,0 +1,24 @@
+{
+  "name": "automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bhavna3001/CypressPracticeTests.git"
+  },
+  "author": "bhavna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bhavna3001/CypressPracticeTests/issues"
+  },
+  "homepage": "https://github.com/bhavna3001/CypressPracticeTests#readme",
+  "devDependencies": {
+    "cypress-cucumber-preprocessor": "^2.0.1"
+  },"cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
