@@ -1,8 +1,0 @@
-{
-        "requestTimeout": 10000,
-        "defaultCommandTimeout": 10000,
-        "testFiles": "**/*.{feature,features}",
-        "video": false
-    }
-    
-

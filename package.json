@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/bhavna3001/CypressPracticeTests#readme",
   "devDependencies": {
-    "cypress-cucumber-preprocessor": "^2.0.1"
-  },"cypress-cucumber-preprocessor": {
+    "cypress": "^3.8.3",
+    "cypress-cucumber-preprocessor": "^2.0.1",
+    "cypress-xpath": "^1.4.0"
+  },
+  "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
   }
 }
