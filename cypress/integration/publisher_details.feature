@@ -1,14 +1,14 @@
 Feature: Publisher basic details 
 
+  Scenario: When I login into c000fey, I go to publisher page
+    Given I successfully login in to c000fey
+    Then I go to publisher details page
 
-  Scenario: After login i go to publisher details page
-  Given I successfully login in to c000fey
-  Then I go to publisher search page
+  Scenario: When I click on the publisher id field , publisher id is shown
+    Given I click on the id field
+    Then Publisher id should be shown in id field
 
-  Scenario: When i click on publisher, publisher details page is shown
-  Given I click on the publisher
-  Then publisher details page is shown
-  
+
   
 
   
