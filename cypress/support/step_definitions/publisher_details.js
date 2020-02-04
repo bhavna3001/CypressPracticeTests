@@ -14,10 +14,19 @@ Given('I click on the id field',function(){
 
 Given('I select for {string} in status field',function(status){
    cy.xpath(publisher_details_page.status_field()).select(status);
-   cy.xpath(publisher_details_page.status_field()).should('have.text',status);
-   
    
 });
+
+Given('I enter the company name',function(){
+    cy.get(publisher_details_page.company_name()).clear();
+    cy.get(publisher_details_page.company_name()).type("ABC company ltd.");
+    
+});
+
+Given('I enter the primary contact',function(){
+    cy.get(publisher_details_page.primary_contact()).clear();
+    cy.get(publisher_details_page.primary_contact()).type("Bhavna QA");
+})
 
 Then('Publisher id should be shown in id field',function(){
     cy.get(publisher_details_page.id_field()).should('have.text','134658');
@@ -25,4 +34,5 @@ Then('Publisher id should be shown in id field',function(){
 
 Then('publisher details updated successfully message is shown',function(){
     cy.get(publisher_details_page.Update_basic_Details()).click();
-})
+});
+

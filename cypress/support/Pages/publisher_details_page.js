@@ -8,5 +8,13 @@ module.exports ={
     },
     Update_basic_Details: function(){
         return('#wrap > div > div:nth-child(2) > div > div > div > form > fieldset > div:nth-child(20) > div > button');
+    },
+    company_name: function(){
+        return('input[name="company"]');
+    },
+    primary_contact: function(){
+        return('input[name="contact"]');
+        
     }
+
 }

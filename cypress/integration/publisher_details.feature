@@ -13,10 +13,22 @@ Feature: Publisher basic details
     Then publisher details updated successfully message is shown
     Examples:
     | status                       |
-    | Active                      |
+    | Active                       |
     | Active - No password set yet |
     | Inactive                     |
     | Denied                       |
+
+ 
+  Scenario: When I enter the company name, it should be updated in basic details
+  Given I enter the company name
+  Then publisher details updated successfully message is shown
+  
+  Scenario: When I enter the primary contact, it should be updated in basic details
+   Given I enter the primary contact
+   Then publisher details updated successfully message is shown
+
+  
+
 
 
   
