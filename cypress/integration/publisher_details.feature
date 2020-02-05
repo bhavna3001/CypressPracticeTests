@@ -76,7 +76,7 @@ Feature: Publisher basic details
   Scenario: When I enter some text in Notes, Updated field should be shown
     Given I enter in the Notes
     Then publisher details updated successfully message is shown
- @smoke
+ 
   Scenario Outline: Error is shown when <field> is left empty
     Given I click on the "<field>" field
     Then Error is shown for the "<field>"
