@@ -14,7 +14,28 @@
 //cucumber dependency
 
 const cucumber = require('cypress-cucumber-preprocessor').default
- 
-module.exports = (on) => {
-  on('file:preprocessor', cucumber())
+var mysql      = require('mysql');
+const connection = mysql.createConnection({
+  host     : process.env.DB_HOST,
+  user     : process.env.DB_USER,
+  password :  process.env.DB_PASS,
+  port: 3306,
+  database : 'mugic'
+});
+
+connection.connect();
+
+
+
+module.exports = ( on ) => {
+    on('file:preprocessor', cucumber());
+    on( "task", {
+        query (sql) {
+          return new Promise((resolve, reject) => {
+            connection.query(sql, (error, results, fields) => {
+              resolve(results);
+            });
+          });
+        }
+    });
 }

@@ -7,25 +7,25 @@ Feature: Publisher basic details
   Scenario: When I click on the publisher id field , publisher id is shown
     Given I click on the id field
     Then Publisher id should be shown in id field
-
+  
   Scenario Outline: When I select the <status> status, then <status> publisher list is shown
     Given I select for "<status>" in status field
-    Then publisher details updated successfully message is shown
+    Then publisher details updated successfully message is shown for "<status>"
     Examples:
-    | status                       |
-    | Active                       |
-    | Active - No password set yet |
-    | Inactive                     |
-    | Denied                       |
+    | status     |
+    | Active     |
+    | Inactive   |
+    | Denied     |          
+    
 
- 
+ @smoke
   Scenario: When I enter the company name, it should be updated in basic details
   Given I enter the company name
-  Then publisher details updated successfully message is shown
+  Then publisher details updated successfully message is shown for company
   
   Scenario: When I enter the primary contact, it should be updated in basic details
    Given I enter the primary contact
-   Then publisher details updated successfully message is shown
+   Then publisher details updated successfully message is shown for contact
 
 
   Scenario Outline: When I select the <name> , publisher list is shown for the account manager
@@ -46,7 +46,7 @@ Feature: Publisher basic details
 
   Scenario Outline: When I enter the <value> , Updated details should be shown in contact <field>
     Given I enter the "<field>" in the contact "<value>" 
-    Then publisher details updated successfully message is shown 
+    Then details are updated for "<field>" with "<value>"
     Examples:
     | field                 | value               |
     | Contact_Email_Address | Bhavna1@website.com |
@@ -61,7 +61,7 @@ Feature: Publisher basic details
 
   Scenario: When I select currency, the updated currency should be shown
     Given I select default currency
-    Then publisher details updated successfully message is shown 
+    Then publisher details updated successfully message is shown for currency
 
 
   Scenario: When I enter Referrer , updated field should be shown

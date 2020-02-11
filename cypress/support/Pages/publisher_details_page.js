@@ -13,7 +13,7 @@ module.exports ={
         return('#wrap > div > div:nth-child(2) > div > div > div > form > fieldset > div.alert.alert-success.alert-dismissable')
     },
     company_name: function(){
-        return('input[name="company"]');
+        return('#wrap > div > div:nth-child(2) > div > div > div > form > fieldset > div:nth-child(4) > div > input');
     },
     primary_contact: function(){
         return('input[name="contact"]');
